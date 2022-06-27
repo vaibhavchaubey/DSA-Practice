@@ -17,8 +17,8 @@ public:
                 //when we return, low of the node is equal to the minimum of low of its child and low of itself
                 low[node] = min(low[node], low[it]);
                 
-   //when we get low of child is greater than tin of the node
-  //it means there is only path to cover child that's why {node, it} will be our critical connections or bridge 
+               //when we get low of child is greater than tin of the node
+                //it means there is only path to cover child that's why {node, it} will be our critical connections or bridge 
                 if(low[it] > tin[node]){
                     ans.push_back({node,it});
                 }
