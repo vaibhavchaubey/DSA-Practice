@@ -11,7 +11,6 @@
  */
 class Solution {
 public:
-    int idx = 0;
     int search(vector<int>& inorder, int start, int end, int curr){
         for(int i = start; i <= end; i++){
             if(inorder[i] == curr){
@@ -20,7 +19,7 @@ public:
         }
         return -1;
     }
-    TreeNode* constructBT(vector<int>& preorder, vector<int>& inorder, int start, int end){
+    TreeNode* constructBT(int& idx , vector<int>& preorder, vector<int>& inorder, int start, int end){
         if(start > end){
             return NULL;
         }
@@ -31,13 +30,14 @@ public:
             return node;
         }
         int pos = search(inorder, start, end, curr);
-        node->left = constructBT(preorder, inorder, start, pos-1);
-        node->right = constructBT(preorder, inorder, pos+1, end);
+        node->left = constructBT(idx, preorder, inorder, start, pos-1);
+        node->right = constructBT(idx, preorder, inorder, pos+1, end);
         
         return node;
     }
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-       TreeNode* root = constructBT(preorder, inorder, 0, preorder.size()-1);
+        int idx = 0;
+       TreeNode* root = constructBT(idx, preorder, inorder, 0, preorder.size()-1);
         
         return root;
     }
