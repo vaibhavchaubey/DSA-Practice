@@ -5,7 +5,7 @@ public:
         
         for(int i = 0; i < numRows; i++){
             ans[i].resize(i+1);
-            for(int j = 0; j <= i; j++){
+            for(int j = 0; j <= i; j++){    //for first and last element
                 if(j == 0 || j == i){
                     ans[i][j] = 1;
                 }
