@@ -18,7 +18,7 @@ public:
                 j++;
             }
             if(i == n){
-                count += x.second;  //if we reach the length of string str then this word in in our string s. so we increase our count by number of times it occured in words instead of increamenting by 1
+                count += x.second;   //if we reach the length of string str then this word in our string s. so we increase our count by the number of times it occurred in words instead of incrementing by 1
             }
         }
         
