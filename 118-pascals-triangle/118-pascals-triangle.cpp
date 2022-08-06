@@ -18,3 +18,6 @@ public:
         return ans;
     }
 };
+
+//Time Complexity: O(numRows^2)
+//Sace Complexity: O(numRows^2)
