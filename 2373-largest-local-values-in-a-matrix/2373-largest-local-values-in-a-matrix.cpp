@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int findMax(int row_start, int col_start, vector<vector<int>>& grid, int n){
+    int findMax(int row_start, int col_start, vector<vector<int>>& grid){
         int maxValue = 0;        
         for(int i = row_start; i < row_start + 3; i++){
             for(int j = col_start; j < col_start + 3; j++){
@@ -12,14 +12,13 @@ public:
     }
     vector<vector<int>> largestLocal(vector<vector<int>>& grid) {
         int n = grid.size();
-        int maxValue = 0;
-        vector<vector<int>> ans;        
+        vector<vector<int>>ans(n-2,vector<int>(n-2,0));
+        
         for(int k = 0; k < n-2; k++){
-            vector<int> vec;
             for(int l = 0; l < n-2; l++){
-                vec.push_back(findMax(k,l,grid,n));
+                int ele = findMax(k,l,grid);
+                ans[k][l] = ele;
             }
-            ans.push_back(vec);
         }
         
         return ans;
