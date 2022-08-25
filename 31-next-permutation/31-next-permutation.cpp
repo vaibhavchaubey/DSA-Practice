@@ -21,3 +21,16 @@ public:
         }
     }
 };
+
+//Time Complexity: O(3N) ~ O(N)
+//Space Complexity: O(1)
+
+
+//OR
+// class Solution {
+// public:
+//     void nextPermutation(vector<int>& nums) { 
+//         //using inbuilt function
+//         next_permutation(nums.begin(),nums.end());
+//     }
+// };
