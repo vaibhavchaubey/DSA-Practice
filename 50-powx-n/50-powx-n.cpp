@@ -7,11 +7,11 @@ public:
             nn = -1 * nn;
         }
         while(nn){
-            if(nn % 2 == 1){
+            if(nn % 2 == 1){    //odd
                 ans = ans * x;
                 nn = nn - 1;
             }
-            else{
+            else{     //even
                 x = x * x;
                 nn = nn/2;
             }
@@ -40,12 +40,10 @@ public:
 //         for(int i = 0; i < nn; i++){
 //             ans = ans * x;
 //         }
-//         if(n >= 0){
-//             return ans;
+//         if(n < 0){
+//             return (double)(1.0) / (double)(ans);
 //         }
-//         else{
-//             return (1/ans);
-//         }
+//         return ans;
 //     }
 // };
 
