@@ -19,6 +19,7 @@ public:
     }
 };
 
+//Moore’s Voting Algorithm
 //Time Complexity: O(N)
 //Space Complexity: O(1)
 
