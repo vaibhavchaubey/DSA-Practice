@@ -1,19 +1,25 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        int n = nums.size();
-        unordered_map<int,int> mp;
-        for(int i = 0; i < n; i++){
-            mp[nums[i]]++;
-            if(mp[nums[i]] > n/2){
-                return nums[i];
+        int count = 0;
+        int candidate = 0;
+        for(auto num : nums){
+            if(count == 0){
+                candidate = num;
+            }
+            if(num == candidate){
+                count++;
+            }
+            else{
+                count--;
             }
         }
-        return -1;
+        
+        return candidate;
     }
 };
 
-//Time Complexity: O(N)-> Frequency array or O(N log N) -> HashMap 
-//Space Complexity: O(N)
+//Time Complexity: O(N)
+//Space Complexity: O(1)
 
 
