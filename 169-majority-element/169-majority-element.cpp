@@ -42,7 +42,7 @@ public:
 //     }
 // };
 
-// Time Complexity: O(N)-> Frequency array or O(NlogN) -> HashMap 
+// Time Complexity: O(N)-> Frequency array(We can use freq array if elements are in range to use) or O(NlogN) -> HashMap 
 // Space Complexity: O(N)
 
 
