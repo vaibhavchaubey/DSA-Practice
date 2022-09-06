@@ -1,15 +1,15 @@
 class Solution {
 public:
-    int solve(int i, int j, int m, int n, vector<vector<int>> &grid){
+    int countPaths(int i, int j, int m, int n, vector<vector<int>> &grid){
         if(i >= m || j >= n) return 0;
         if(i == m-1 && j == n-1) return 1;
-        if(grid[i][j]) return grid[i][j];
+        if(grid[i][j] != -1) return grid[i][j];
                                     //down             //right
-        return grid[i][j] = solve(i+1,j,m,n,grid) + solve(i,j+1,m,n,grid);        
+        return grid[i][j] = countPaths(i+1,j,m,n,grid) + countPaths(i,j+1,m,n,grid);        
     }
     int uniquePaths(int m, int n) {
-        vector<vector<int>> grid(m,vector<int>(n,0));
-        return solve(0,0,m,n, grid);
+        vector<vector<int>> grid(m,vector<int>(n,-1));
+        return countPaths(0,0,m,n, grid);
     }
 };
 
@@ -25,14 +25,14 @@ public:
 
 // class Solution {
 // public:
-//     int solve(int i, int j, int m, int n){
+//     int countPaths(int i, int j, int m, int n){
 //         if(i >= m || j >= n) return 0;
 //         if(i == m-1 && j == n-1) return 1;
 //                    //down             //right
-//         return solve(i++,j,m,n) + solve(i,j++,m,n);        
+//         return countPaths(i+1,j,m,n) + countPaths(i,j+1,m,n);        
 //     }
 //     int uniquePaths(int m, int n) {
-//         return solve(0,0,m,n);
+//         return countPaths(0,0,m,n);
 //     }
 // };
 
