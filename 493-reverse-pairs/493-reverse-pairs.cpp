@@ -58,3 +58,10 @@ public:
         return mergeSort(nums,0,n-1);
     }
 };
+
+
+// Time Complexity : O( N log N ) + O (N) + O (N)   
+// Reason : O(N) – Merge operation , O(N) – counting operation ( at each iteration of i , j doesn’t start from 0 . Both of them move linearly ) 
+
+// Space Complexity : O(N) 
+// Reason : O(N) – Temporary vector
