@@ -35,7 +35,7 @@ public:
             nums[k] = a[i];
             k++; i++;
         }
-        while(i < n2){
+        while(j < n2){
             nums[k] = b[j];
             k++; j++;
         }
