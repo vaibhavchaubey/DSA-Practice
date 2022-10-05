@@ -29,7 +29,7 @@ public:
         if(p1 != NULL){
             p3->next = p1;
         }
-        else if(p2 != NULL){
+        else{
             p3->next = p2;
         }
         
