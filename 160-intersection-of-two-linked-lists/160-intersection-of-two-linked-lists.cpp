@@ -26,7 +26,6 @@ public:
             else{
                 d2 = d2->next;
             }
-            
         }
         return d1;
     }
