@@ -49,7 +49,7 @@ public:
 //     ListNode* removeNthFromEnd(ListNode* head, int n) {
 //         int l = length(head);
 //         int pos = l-n+1;
-//         if(l==1 || pos==1){
+//         if(pos==1){
 //             return head->next;
 //         }
 
