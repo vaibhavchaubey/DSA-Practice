@@ -13,7 +13,7 @@ struct meeting {
 class Solution
 {
     public:
-    bool static comp(struct meeting m1, meeting m2){
+    static bool comp(struct meeting m1, meeting m2){
         if(m1.end < m2.end) return true;
         else if(m1.end > m2.end) return false;
         else if(m1.pos < m2.pos) return true;
